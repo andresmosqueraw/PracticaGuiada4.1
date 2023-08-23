@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="48dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tvTitle" />
+
+    <!-- 1. Version Android -->
+    <TextView
+        android:id="@+id/tvVersionAndroidLB"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12sp"
+        android:layout_height="wrap_content"
+        android:text="@string/tvVersionAndroidLB" />
+
+    <TextView
+        android:id="@+id/tvVersionAndroid"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="12sp"
+        android:layout_height="wrap_content" />
+
+    <!-- 2. FlashLight -->
+    <TextView
+        android:id="@+id/tvLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/tvLigth" />
+
+    <TextView
+        android:id="@+id/tvFlashLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnOff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="12dp"
+            android:backgroundTint="@color/pink_abnb"
+            android:text="@string/btn0ff" />
+
+        <Button
+            android:id="@+id/btnOn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/pink_abnb"
+            android:text="@string/btnOn" />
+
+    </TableRow>
+
+    <!-- 3. Level of Battery -->
+    <TextView
+        android:id="@+id/tvLevelBatteryLB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="12dp"
+        android:text="@string/tvLevelBaterry" />
+
+    <ProgressBar
+        android:id="@+id/pbLevelBattery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="50" />
+
+
+    <!-- 4. Storage -->
+    <TextView
+        android:id="@+id/tvStorageLB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/tvStorage" />
+
+    <EditText
+        android:id="@+id/etNameFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/etNameFile" />
+
+    <ImageButton
+        android:id="@+id/btnSaveFile"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:contentDescription="@string/btnSaveFile"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/pink_abnb"
+        android:layout_marginBottom="12dp"
+        android:src="@android:drawable/ic_menu_save" />
+
+    <!-- 5. Connection -->
+    <TextView
+        android:id="@+id/tvConectionLB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginBottom="12sp"
+        android:text="@string/tvState" />
+
+    <TextView
+        android:id="@+id/tvConexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
