@@ -12,4 +12,5 @@
     <string name="btnSaveFile">Save</string>
     <string name="tvState">5. Conection:</string>
     <string name="tvTitle">My Resources Devices</string>
+    <string name="tvBluetooth">6. Bluetooth</string>
 </resources>

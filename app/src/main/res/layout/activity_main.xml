@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingTop="48dp"
-    android:paddingLeft="24dp"
-    android:paddingRight="24dp">
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="48dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="48dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="48dp"
         android:layout_height="wrap_content"
         android:text="@string/tvTitle" />
 
@@ -19,7 +25,7 @@
     <TextView
         android:id="@+id/tvVersionAndroidLB"
         android:layout_width="wrap_content"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="12sp"
         android:layout_height="wrap_content"
@@ -28,7 +34,8 @@
     <TextView
         android:id="@+id/tvVersionAndroid"
         android:layout_width="wrap_content"
-        android:layout_marginBottom="12sp"
+        android:layout_marginBottom="24dp"
+        android:textSize="20sp"
         android:layout_height="wrap_content" />
 
     <!-- 2. FlashLight -->
@@ -36,18 +43,15 @@
         android:id="@+id/tvLight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:text="@string/tvLigth" />
-
-    <TextView
-        android:id="@+id/tvFlashLight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
 
         <Button
             android:id="@+id/btnOff"
@@ -74,28 +78,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:layout_marginTop="12dp"
         android:text="@string/tvLevelBaterry" />
 
+    <!-- 4. Storage -->
     <ProgressBar
         android:id="@+id/pbLevelBattery"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        android:indeterminate="false"
-        android:max="100"
-        android:progress="50" />
+        android:layout_marginBottom="24dp"
+        android:progressTint="@color/pink_abnb" />
 
-
-    <!-- 4. Storage -->
     <TextView
         android:id="@+id/tvStorageLB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:layout_marginBottom="12dp"
+        android:textSize="24sp"
         android:text="@string/tvStorage" />
 
     <EditText
@@ -112,7 +115,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/pink_abnb"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
         android:src="@android:drawable/ic_menu_save" />
 
     <!-- 5. Connection -->
@@ -121,14 +124,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:layout_marginBottom="12sp"
         android:text="@string/tvState" />
 
     <TextView
         android:id="@+id/tvConexion"
         android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="24dp"
         android:layout_height="wrap_content" />
 
+        <!-- 6. Bluetooth -->
+        <TextView
+            android:id="@+id/tvBluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="@string/tvBluetooth" />
 
-</LinearLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnOffBluetooth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="12dp"
+                android:backgroundTint="@color/pink_abnb"
+                android:text="@string/btn0ff" />
+
+            <Button
+                android:id="@+id/btnOnBluetooth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/pink_abnb"
+                android:text="@string/btnOn" />
+
+        </TableRow>
+
+
+    </LinearLayout>
+
+</ScrollView>
